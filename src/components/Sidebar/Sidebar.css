@@ -1,0 +1,131 @@
+.sidebar {
+  position: sticky;
+  top: 80px;
+  flex: 0.2;
+  text-align: center;
+  height: fit-content;
+}
+
+.sidebar__top,
+.sidebar__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.sidebar__profile > img:first-child {
+  margin-bottom: -40px;
+  height: 60px;
+  object-fit: fill;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.sidebar__profile > img:nth-child(2) {
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.sidebar__title {
+  border-bottom: 0.1px solid rgb(211, 211, 211);
+}
+
+.sidebar__title > a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.sidebar__title > a:hover {
+  text-decoration: underline;
+}
+
+.sidebar__viewStats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  border-bottom: 0.1px solid rgb(211, 211, 211);
+}
+
+.sidebar__viewStats p {
+  margin: 5px 10px;
+}
+
+.sidebar__viewStat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 1px;
+}
+
+.sidebar__viewStat:last-child {
+  margin-bottom: 10px;
+}
+
+.sidebar__viewStat p:first-child {
+  color: rgb(128, 128, 128);
+  font-size: small;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.sidebar__viewStatNum {
+  color: #0077b5;
+  font-size: small;
+  font-weight: 500;
+}
+
+.sidebar__premium {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px 0px 5px;
+  border-bottom: 0.1px solid rgb(211, 211, 211);
+}
+
+.sidebar__premium h5 {
+  padding-left: 5px;
+  margin: auto 3px;
+  font-weight: 500;
+  font-size: small;
+}
+
+.sidebar__premium p {
+  margin: 0px 10px;
+  color: rgb(128, 128, 128);
+  font-size: small;
+  font-weight: 300;
+}
+
+.sidebar__insights {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+
+.sidebar__insights a {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px 10px 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.sidebar__myItems {
+  margin: 10px auto 10px 10px;
+}
+.sidebar__myItems a {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.sidebar__myItems h5 {
+  margin: 0px 0px 0px 10px;
+  font-size: small;
+  font-weight: 500;
+}

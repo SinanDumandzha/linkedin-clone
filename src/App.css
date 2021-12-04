@@ -1,1 +1,14 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f2ef;
+}
 
+.app__main {
+  display: flex;
+}
+
+.sidebar__viewStats {
+  display: flex;
+}
