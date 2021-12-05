@@ -1,0 +1,73 @@
+.feed {
+  flex: 0.6;
+  margin: 10px 20px;
+  width: 100%;
+}
+
+.feed__inputBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.feed__input {
+  display: flex;
+}
+
+.feed__inputForm {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 30px;
+  padding: 10px 10px 10px 15px;
+  color: rgb(128, 128, 128);
+  margin: 0px 0px 10px 10px;
+}
+
+.feed__inputForm > form {
+  display: flex;
+  width: 100%;
+}
+
+.feed__inputForm > form > input {
+  border: none;
+  flex: 1;
+  padding: 5px 10px;
+  outline-width: 0;
+  font-weight: 600;
+}
+
+.feed__inputForm > form > button {
+  display: none;
+}
+
+.inputOption {
+  display: flex;
+  align-items: center;
+  color: rgb(128, 128, 128);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.inputOption h5 {
+  margin: 0px 0px 0px 10px;
+  font-weight: 500;
+}
+
+.feed__inputItems {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed__inputItems a {
+  text-decoration: none;
+}
+
+.feed__inputItems a:hover {
+  background-color: rgb(211, 211, 211);
+}
