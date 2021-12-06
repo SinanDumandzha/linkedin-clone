@@ -6,16 +6,22 @@ import Post from "../Post/Post";
 import { faImage, faCalendarCheck, faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { db } from "../../firebase";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, getDocs, addDoc, query, orderBy, serverTimestamp } from "firebase/firestore";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../store/userSlice";
 
 const Feed = () => {
-  const postsCollectionRef = collection(db, "posts");
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
+  const user = useSelector(selectUser);
+
+  const postsCollectionRef = collection(db, "posts");
+
   useEffect(() => {
-    const getPosts = async () => {
-      const data = await getDocs(postsCollectionRef);
+    const getUsers = async () => {
+      const q = query(postsCollectionRef, orderBy("timestamp", "desc"));
+      const data = await getDocs(q);
 
       setPosts(
         data.docs.map((doc) => ({
@@ -25,24 +31,28 @@ const Feed = () => {
       );
     };
 
-    getPosts();
-  }, []);
+    getUsers();
+  }, [postsCollectionRef]);
 
-  const sendPost = async (e) => {
-    await e.preventDefault();
-    await addDoc(postsCollectionRef, { message: input });
+  const sendPost = (e) => {
+    e.preventDefault();
+
+    addDoc(postsCollectionRef, {
+      name: user.displayName,
+      description: user.email,
+      message: input,
+      photoUrl: user.photoURL || "",
+      timestamp: serverTimestamp(),
+    });
+
+    setInput("");
   };
 
   return (
     <div className="feed">
       <div className="feed__inputBody">
         <div className="feed__input">
-          <Avatar
-            img="https://media-exp1.licdn.com/dms/image/C4D03AQGOb8opJ8UOSw/profile-displayphoto-shrink_100_100/0/1554989073975?e=1643846400&v=beta&t=qeey6KJPaRuiApmcQ2WWgCLkkozCeuuLe0U8maiKwt0"
-            alt="profile"
-            height="45"
-            width="45"
-          />
+          <Avatar img={user.photoURL} alt="profile" height="45" width="45" />
           <div className="feed__inputForm">
             <form>
               <input type="text" placeholder="Start a post" value={input} onChange={(e) => setInput(e.target.value)} />

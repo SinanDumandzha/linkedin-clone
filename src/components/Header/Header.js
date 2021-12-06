@@ -1,12 +1,22 @@
 import React from "react";
 import "./Header.css";
 import Avatar from "../Avatar/Avatar";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faHome, faUserFriends, faBriefcase, faCommentDots, faBell, faCaretDown, faGripHorizontal } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "../../store/userSlice";
+import { auth } from "../../firebase";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser);
+
+  const logoutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
+
   return (
     <div className="header">
       <div className="header__left">
@@ -18,7 +28,6 @@ const Header = () => {
           <input type="text" placeholder="Search" style={{ marginLeft: "2px", size: "100" }} />
         </div>
       </div>
-
       <div className="header__right">
         <div className="navItem">
           <FontAwesomeIcon icon={faHome} size="lg" />
@@ -40,13 +49,8 @@ const Header = () => {
           <FontAwesomeIcon icon={faBell} size="lg" />
           <h4 className="navItem__title">Notifications</h4>
         </div>
-        <div className="navItem" style={{ paddingRight: "30px", borderRight: "0.1px solid rgb(211, 211, 211)" }}>
-          <Avatar
-            img="https://media-exp1.licdn.com/dms/image/C4D03AQGOb8opJ8UOSw/profile-displayphoto-shrink_100_100/0/1554989073975?e=1643846400&v=beta&t=qeey6KJPaRuiApmcQ2WWgCLkkozCeuuLe0U8maiKwt0"
-            alt="profile"
-            height="25"
-            width="25"
-          />
+        <div className="navItem" onClick={logoutOfApp} style={{ paddingRight: "30px", borderRight: "0.1px solid rgb(211, 211, 211)" }}>
+          <Avatar img={user.photoURL} alt="profile" height="25" width="25" />
           <div className="navItem__nameArrow">
             <h4 className="navItem__title" style={{ margin: "0px auto" }}>
               Me

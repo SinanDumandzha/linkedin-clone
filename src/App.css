@@ -7,4 +7,6 @@
 
 .app__main {
   display: flex;
+  max-width: 1200px;
+  margin: 0px 20px;
 }

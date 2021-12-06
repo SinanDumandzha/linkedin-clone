@@ -1,11 +1,14 @@
 import React from "react";
 import Avatar from "../Avatar/Avatar";
 import "./Sidebar.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark, faSquare, faUsers, faHashtag, faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../store/userSlice";
 
 const Sidebar = () => {
+  const user = useSelector(selectUser);
+
   const sidebarItem = (icon, title) => (
     <div className="sidebarItem">
       <FontAwesomeIcon icon={icon} color="rgb(128, 128, 128)" size="1x" />
@@ -21,17 +24,13 @@ const Sidebar = () => {
             src="https://media-exp1.licdn.com/dms/image/C4D16AQGCqqdjylH34w/profile-displaybackgroundimage-shrink_350_1400/0/1611300607311?e=1643846400&v=beta&t=VXQCjT36ZPmxJrAhyvOBdIM5ztAoDdB125c4VWhpLc8"
             alt=""
           />
-          <Avatar
-            img="https://media-exp1.licdn.com/dms/image/C4D03AQGOb8opJ8UOSw/profile-displayphoto-shrink_100_100/0/1554989073975?e=1643846400&v=beta&t=qeey6KJPaRuiApmcQ2WWgCLkkozCeuuLe0U8maiKwt0"
-            alt="profile"
-            height="80"
-            width="80"
-          />
+          <Avatar img={user.photoURL} alt="profile" height="80" width="80" />
+
           <div className="sidebar__title">
             <a href="linkedin.com/sinan-dumandzha/">
-              <h3 style={{ fontWeight: "500", marginBottom: "5px" }}>Sinan Dumandzha</h3>
+              <h3 style={{ fontWeight: "500", marginBottom: "5px" }}>{user.displayName}</h3>
             </a>
-            <p style={{ color: "rgb(128, 128, 128)", marginTop: "0px", fontSize: "0.9rem" }}>React Developer</p>
+            <p style={{ color: "rgb(128, 128, 128)", marginTop: "0px", fontSize: "0.9rem" }}>{user.email}</p>
           </div>
         </div>
         <div className="sidebar__viewStats">
