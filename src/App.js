@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { login, logout, selectUser } from "./store/userSlice";
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import RecomSidebar from "./components/RecomSidebar/RecomSidebar";
 
 const App = () => {
   const user = useSelector(selectUser);
@@ -40,6 +41,7 @@ const App = () => {
         <div className="app__main">
           <Sidebar />
           <Feed />
+          <RecomSidebar />
         </div>
       )}
     </div>

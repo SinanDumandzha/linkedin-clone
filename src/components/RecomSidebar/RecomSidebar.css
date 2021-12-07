@@ -1,0 +1,99 @@
+.recomSidebar {
+  position: sticky;
+  top: 76px;
+  width: 40vw;
+  margin-top: 50px;
+}
+
+.recomSidebar__top,
+.recomSidebar__bottom {
+  margin: 0px 20px 5px 20px;
+  padding: 10px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  height: fit-content;
+}
+
+.recomSidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.recomSidebar__header > h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.recomSidebar__header > svg {
+  margin-left: 20px;
+}
+
+.recomSidebar__addFeed {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.recomSidebar__addFeed:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.recomSidebar svg {
+  font-size: smaller;
+  color: rgb(104, 103, 103);
+}
+
+.recomSidebar__recomLink > a {
+  margin-left: 5px;
+  text-decoration: none;
+  color: rgb(128, 128, 128);
+  font-size: medium;
+  font-weight: 500;
+}
+
+.recomSidebar__recomLink > a:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.recomsSideBar__linkList {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  padding: 10px;
+  height: fit-content;
+  width: 15vw;
+}
+
+.recomsSideBar__linkList > li > a {
+  margin: 4px 8px;
+  text-decoration: none;
+}
+
+.recomsSideBar__linkList > li > a > span {
+  color: rgb(128, 128, 128);
+  font-size: small;
+  font-weight: 400;
+}
+
+.recomsSideBar__linkList > li > a > span:hover {
+  color: #0077b5;
+  text-decoration: underline;
+}
+
+.recomSidebar__companyInfo {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.recomSidebar__companyInfo > h4 {
+  font-size: small;
+  font-weight: 400;
+  margin: 0px 0px 0px 5px;
+}

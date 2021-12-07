@@ -38,17 +38,43 @@
   display: flex;
 }
 
-.navItem {
+.navItem > a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 20px;
+  margin: 0px 10px;
   color: rgb(128, 128, 128);
   cursor: pointer;
   object-fit: contain;
+  text-decoration: none;
 }
 
-.navItem:hover {
+.navItem a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.navItem > a > svg {
+  font-size: x-large;
+}
+
+.header__right > .navItem:first-child {
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.header__right > .navItem:first-child > a * {
+  color: rgb(0, 0, 0);
+}
+
+.navItem:nth-child(6) {
+  margin-left: 20px;
+  text-align: center;
+  color: rgb(128, 128, 128);
+  cursor: pointer;
+}
+
+.navItem:nth-child(6):hover,
+.navItem:nth-child(7):hover {
   color: rgb(0, 0, 0);
 }
 

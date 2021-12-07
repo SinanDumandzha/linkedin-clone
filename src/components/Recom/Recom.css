@@ -1,0 +1,44 @@
+.recom {
+  display: flex;
+  align-items: flex-start;
+  margin: 15px 0px;
+}
+
+.recom h4 {
+  margin: 0px;
+  color: rgb(0, 0, 0);
+}
+
+.recom__info {
+  margin-left: 10px;
+}
+
+.recom a {
+  text-decoration: none;
+}
+
+.recom p {
+  margin: 0px 0px 5px 0px;
+  color: rgb(128, 128, 128);
+  font-size: small;
+}
+
+.recom__follow {
+  padding: 3px 15px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(104, 103, 103);
+  border-radius: 20px;
+  color: rgb(128, 128, 128);
+  font-size: medium;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.recom__follow:hover {
+  border: 2px solid rgb(104, 103, 103);
+  background-color: rgb(211, 211, 211);
+}
+
+.recomPlus {
+  font-size: larger;
+}

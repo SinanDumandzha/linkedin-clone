@@ -25,7 +25,6 @@ const Sidebar = () => {
             alt=""
           />
           <Avatar img={user.photoURL} alt="profile" height="80" width="80" />
-
           <div className="sidebar__title">
             <a href="linkedin.com/sinan-dumandzha/">
               <h3 style={{ fontWeight: "500", marginBottom: "5px" }}>{user.displayName}</h3>
@@ -41,7 +40,7 @@ const Sidebar = () => {
             </a>
           </div>
           <div className="sidebar__viewStat">
-            <a href="https://www.linkedin.com/in/sinan-dumandzha/detail/recent-activity/shares/">
+            <a href="https://www.linkedin.com/">
               <p>Views of your post</p>
               <p className="sidebar__viewStatNum">654</p>
             </a>

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./Post.css";
 import Avatar from "../Avatar/Avatar";
 import InputItems from "../InputItems/InputItems";
 import { faThumbsUp, faComment, faShare, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
-const Post = ({ name, desc, message, photoUrl }) => {
+const Post = forwardRef(({ name, desc, message, photoUrl }, ref) => {
   return (
-    <div className="post">
+    <div ref={ref} className="post">
       <div className="post__header">
         <Avatar img={photoUrl} alt={name} height="45" width="45" />
         <div className="post__info">
@@ -25,6 +25,6 @@ const Post = ({ name, desc, message, photoUrl }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Post;

@@ -1,12 +1,14 @@
 .sidebar {
-  flex: 0.2;
+  flex: 1;
   text-align: center;
   height: fit-content;
+  margin: 50px 20px;
 }
 
 .sidebar__bottom {
   position: sticky;
-  top: 76px;
+  top: 40px;
+  margin-top: 5px;
 }
 
 .sidebar__top,
@@ -14,7 +16,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
   border: 1px solid rgb(211, 211, 211);
   border-radius: 10px;
   background-color: rgb(255, 255, 255);

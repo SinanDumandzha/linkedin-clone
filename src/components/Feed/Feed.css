@@ -1,6 +1,5 @@
 .feed {
-  flex: 0.6;
-  margin: 10px 20px;
+  margin: 50px 0px;
   width: 100%;
 }
 
@@ -10,8 +9,8 @@
   justify-content: space-evenly;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 20px;
   background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
 }
 
 .feed__input {
@@ -70,4 +69,41 @@
 
 .feed__inputItems a:hover {
   background-color: rgb(211, 211, 211);
+}
+
+.feed__sort {
+  margin: 5px 0px;
+}
+
+.feed__sort,
+.feed__button,
+.feed__text {
+  display: flex;
+}
+
+.feed__hr {
+  flex-grow: 1;
+}
+
+.feed__button {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: none;
+}
+
+.feed__button:hover {
+  cursor: pointer;
+}
+
+.feed__text {
+  margin-left: 5px;
+}
+
+.feed_sortBy {
+  color: rgb(128, 128, 128);
+}
+
+.feed__top {
+  margin-left: 2px;
 }

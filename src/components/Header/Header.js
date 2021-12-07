@@ -30,24 +30,34 @@ const Header = () => {
       </div>
       <div className="header__right">
         <div className="navItem">
-          <FontAwesomeIcon icon={faHome} size="lg" />
-          <h4 className="navItem__title">Home</h4>
+          <a href="https://www.linkedin.com/feed/">
+            <FontAwesomeIcon icon={faHome} size="lg" />
+            <h4 className="navItem__title">Home</h4>
+          </a>
         </div>
         <div className="navItem">
-          <FontAwesomeIcon icon={faUserFriends} size="lg" />
-          <h4 className="navItem__title">My Network</h4>
+          <a href="https://www.linkedin.com/mynetwork/">
+            <FontAwesomeIcon icon={faUserFriends} size="lg" />
+            <h4 className="navItem__title">My Network</h4>
+          </a>
         </div>
         <div className="navItem">
-          <FontAwesomeIcon icon={faBriefcase} size="lg" />
-          <h4 className="navItem__title">Jobs</h4>
+          <a href="https://www.linkedin.com/jobs/">
+            <FontAwesomeIcon icon={faBriefcase} size="lg" />
+            <h4 className="navItem__title">Jobs</h4>
+          </a>
         </div>
         <div className="navItem">
-          <FontAwesomeIcon icon={faCommentDots} size="lg" />
-          <h4 className="navItem__title">Messaging</h4>
+          <a href="https://www.linkedin.com/messaging/">
+            <FontAwesomeIcon icon={faCommentDots} size="lg" />
+            <h4 className="navItem__title">Messaging</h4>
+          </a>
         </div>
         <div className="navItem">
-          <FontAwesomeIcon icon={faBell} size="lg" />
-          <h4 className="navItem__title">Notifications</h4>
+          <a href="https://www.linkedin.com/notifications">
+            <FontAwesomeIcon icon={faBell} size="lg" />
+            <h4 className="navItem__title">Notifications</h4>
+          </a>
         </div>
         <div className="navItem" onClick={logoutOfApp} style={{ paddingRight: "30px", borderRight: "0.1px solid rgb(211, 211, 211)" }}>
           <Avatar img={user.photoURL} alt="profile" height="25" width="25" />
@@ -58,7 +68,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faCaretDown} size="lg" style={{ marginLeft: "2px", marginTop: "auto" }} />
           </div>
         </div>
-        <div className="navItem" style={{ marginLeft: "30px" }}>
+        <div className="navItem" style={{ marginLeft: "30px", textAlign: "center", color: "rgb(128, 128, 128)" }}>
           <FontAwesomeIcon icon={faGripHorizontal} size="lg" />
           <div className="navItem__nameArrow">
             <h4 className="navItem__title">Work</h4>
