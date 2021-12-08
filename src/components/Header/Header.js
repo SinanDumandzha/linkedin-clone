@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header__left">
-        <a href="linkedin.com/feed/">
+        <a href="https://www.linkedin.com/feed/">
           <FontAwesomeIcon icon={faLinkedin} color="#0077b5" size="3x" />
         </a>
         <div className="search">

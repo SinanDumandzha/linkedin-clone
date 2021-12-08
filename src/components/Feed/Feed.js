@@ -75,23 +75,14 @@ const Feed = () => {
         </div>
       </div>
 
-      <div class="feed__sort">
-        <button class="feed__button" type="button">
+      <div className="feed__sort">
+        <button className="feed__button" type="button">
           <hr className="feed__hr" />
           <div className="feed__text">
             <span className="feed_sortBy">Sort by:</span>
             <span className="feed__top">Top</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              data-supported-dps="16x16"
-              fill="currentColor"
-              class="mercado-match"
-              width="16"
-              height="16"
-              focusable="false"
-            >
-              <path d="M8 11L3 6h10z" fill-rule="evenodd"></path>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false">
+              <path d="M8 11L3 6h10z" fillRule="evenodd"></path>
             </svg>
           </div>
         </button>

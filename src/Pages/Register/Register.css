@@ -1,4 +1,4 @@
-.login {
+.register {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,18 +7,18 @@
   height: 100vh;
 }
 
-.login > img {
+.register > img {
   object-fit: contain;
   height: 70px;
   margin: 20px 0;
 }
 
-.login > form {
+.register > form {
   display: flex;
   flex-direction: column;
 }
 
-.login > form > input {
+.register > form > input {
   width: 350px;
   height: 40px;
   font-size: 20px;
@@ -27,8 +27,8 @@
   border-radius: 5px;
 }
 
-.login > form > button {
-  width: 365px;
+.register > form > button {
+  width: 350px;
   height: 40px;
   font-size: large;
   color: rgb(255, 255, 255);
@@ -37,11 +37,11 @@
   cursor: pointer;
 }
 
-.login__register {
+.register__register {
   color: #005685;
   cursor: pointer;
 }
 
-.login > p {
+.register > p {
   margin-top: 20xp;
 }
